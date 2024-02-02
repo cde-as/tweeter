@@ -1,0 +1,14 @@
+header {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 400px;
+  
+  margin-top: 120px; /*Set to the height of the navabar so that the header is pushed below*/ 
+  background-color: #92b8eb;
+  background-image: url("https://www.transparenttextures.com/patterns/foggy-birds.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+

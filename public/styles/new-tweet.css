@@ -1,0 +1,56 @@
+.turnRed {
+  color:red;
+}
+
+.new-tweet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  background-color: #f4f1ec;
+  /* text-align: center; What are you humming about*/
+}
+
+.counter {
+  display: flex;
+  align-items: start;
+  font-family: 'Bungee', sans-serif;
+}
+
+button {
+  font-family: 'Bungee', sans-serif;
+  background-color: #4056A1; /* Default background color */
+  color: #FFFFFF;
+
+}
+
+.button-and-counter {
+  display: flex; 
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+textarea { /*Type your tweet...*/
+  border: none;
+  border-bottom: 4px solid black;
+  padding: 8px;
+  background-color: #f4f1ec;
+  width: 100%;
+}
+
+
+article.tweet header {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-around;
+  background-color: #f4f1ec;
+  
+  
+}

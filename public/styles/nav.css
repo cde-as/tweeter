@@ -1,0 +1,30 @@
+nav {
+  height: 120px; /* Set height to 120 pixels */
+  width: 100%; /* Full width of the viewport */
+  background-color: #4056A1; /* Default background color */
+  color: #FFFFFF; /* Default font color */
+  padding: 1.5em; /* Add padding for spacing on the right and left */
+  display: flex;
+  justify-content: space-between; /* Align items on the right and left */
+  align-items: center; /* Center items vertically */
+  position: fixed; /* Nav-bar always on screen effect*/
+  top: 0; 
+  left: 0;
+  right:0;
+  z-index: 1000; /*Ensures navbar is above other elements, higher value z-index items are stacked on top of lower ones*/
+}
+
+nav span {
+  font-family: 'Bungee', sans-serif; /* Apply Bungee to span within nav */
+}
+
+.new-tweet-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 10px;
+}
+
+
+
+
