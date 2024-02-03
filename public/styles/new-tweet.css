@@ -44,13 +44,61 @@ textarea { /*Type your tweet...*/
   width: 100%;
 }
 
+article {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  background-color: #f4f1ec;
+  border: 3px solid black;
+  margin: 200px;
+}
+
+article.tweet:hover {
+  box-shadow: 12px 12px 2px 1px rgba(36, 36, 38, 0.2);
+}
+
 
 article.tweet header {
   display: flex;
   flex-direction: row;
-  align-content: center;
+  align-items: center;
   justify-content: space-around;
   background-color: #f4f1ec;
-  
-  
+  padding: 20px;
+   
 }
+
+article.tweet img { /*Profile Pic*/
+  width: 5%;
+  align-items: start;
+  margin: 5px;
+}
+
+article.tweet #user-first-name { /*Chris*/
+  margin-right: auto; 
+}
+
+.tweet-content { /*Black Line*/
+  padding: 20px;
+  border-bottom: 3px solid black;
+  margin: 10px;
+}
+
+.tweet-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 20px;
+  font-size: 70%;
+  margin: 10px;
+}
+
+.tweet-footer-icons i {
+  cursor: pointer;
+  padding: 5px;
+}
+
+.tweet-footer-icons i:hover {
+  color: #ab962c; 
+}
+
