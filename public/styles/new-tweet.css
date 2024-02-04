@@ -75,7 +75,7 @@ article.tweet img { /*Profile Pic*/
   margin: 5px;
 }
 
-article.tweet #user-first-name { /*Chris*/
+article.tweet .user-first-name { /*Chris*/
   margin-right: auto; 
 }
 
