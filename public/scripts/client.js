@@ -4,7 +4,8 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-/* global $,document */
+/* global $, document, timeago */
+
 const data = [
   {
     "user": {
@@ -30,6 +31,7 @@ const data = [
   }
 ];
 
+
 const createTweetElement = (tweet) => {
   const $tweetElement = $(`
   <article class="tweet">
@@ -42,7 +44,7 @@ const createTweetElement = (tweet) => {
           <p class="tweet-content">${tweet.content.text}</p>
 
           <div class="tweet-footer">
-            <div class="tweet-date">${tweet.created_at}</div>
+            <div class="tweet-date">${timeago.format(tweet.created_at)}</div>
             <div class="tweet-footer-icons">
               <i class="fa-solid fa-flag"></i>
               <i class="fa-solid fa-retweet"></i>
@@ -68,6 +70,37 @@ const renderTweets = function(tweets) {
     $('.tweets-container').append($tweetItem);
   }
 };
+
+
+
+$(document).ready(() =>{
+  //Event listener for submit and prevent its default behaviour.
+
+  $('#tweet-form').on('submit', (event) => {
+    event.preventDefault();
+
+    //The jQuery .serialize() function turns a set of form data into a query string.
+    const serializedData = $('#tweet-form').serialize();
+    console.log(serializedData);
+    
+    // This serialized data should be sent to the server in the data field of the AJAX POST request.
+    $.post('/tweets/', serializedData).then(() => {
+      loadTweets();
+    });
+
+    //Fetches tweets from the /tweets page. Uses jQuery to make a request to /tweets and receive the array of tweets as JSON.
+    const loadTweets = function() {
+      $.ajax('/tweets/', {method: 'GET'})
+        .then(function(response) {
+          renderTweets(response);
+        })
+        .catch(function(error) {
+          console.log('Error', error);
+        });
+      
+    };
+  });
+});
 
 $(document).ready(() =>{
   renderTweets(data);

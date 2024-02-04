@@ -35,7 +35,7 @@ app.use("/tweets", tweetsRoutes);
 app.post('/tweets/', (req, res) => {
   // Handle the form submission here using req.body
   console.log(req.body);
-  res.send('<h1>Tweet submitted successfully</h1>');
+  
 });
 
 app.listen(PORT, () => {
