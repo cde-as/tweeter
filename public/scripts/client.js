@@ -32,7 +32,16 @@ const data = [
 ];
 
 
+const escape = function(str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
 const createTweetElement = (tweet) => {
+  //Use the escape function in out <p> element
+  const escapedText = escape(tweet.content.text);
+
   const $tweetElement = $(`
   <article class="tweet">
          <header class="tweet-header">
@@ -41,7 +50,7 @@ const createTweetElement = (tweet) => {
           <div class="user-first-name">${tweet.user.name}</div>
           <div class="username">${tweet.user.handle}</div>
           </header>
-          <p class="tweet-content">${tweet.content.text}</p>
+          <p class="tweet-content">${escapedText}</p>
 
           <div class="tweet-footer">
             <div class="tweet-date">${timeago.format(tweet.created_at)}</div>
@@ -67,17 +76,37 @@ const renderTweets = function(tweets) {
 
   for (const tweet of tweets) {
     const $tweetItem = createTweetElement(tweet);
-    $('.tweets-container').append($tweetItem);
+    $('.tweets-container').prepend($tweetItem);
   }
 };
 
 
-
 $(document).ready(() =>{
-  //Event listener for submit and prevent its default behaviour.
+  //Hide error messages
+  $('#alert').hide();
+  $('#alertNoChar').hide();
 
+  //Event listener for submit and prevent its default behaviour.
   $('#tweet-form').on('submit', (event) => {
     event.preventDefault();
+
+    // Get tweet & perform tweet validations
+    const tweetContent = $("#tweet-text").val();
+    const alertElement = document.getElementById('alert');
+    const alertNoChar = document.getElementById('alertNoChar');
+
+    $('#alertNoChar').slideUp();
+    $('#alert').slideUp();
+
+    if (!tweetContent || tweetContent.trim() === "") {
+      $('#alertNoChar').slideDown();
+      alertNoChar.style.display = 'flex';
+    }
+
+    if (tweetContent.length > 140) {
+      $('#alert').slideDown();
+      alertElement.style.display = 'flex';
+    }
 
     //The jQuery .serialize() function turns a set of form data into a query string.
     const serializedData = $('#tweet-form').serialize();

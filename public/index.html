@@ -51,7 +51,7 @@
       </div>
       
       <div class = "user-profile">
-          <h2>Your Name</h2>
+          <h2>Amy Mansell</h2>
       </div>
     </header>
 
@@ -59,6 +59,7 @@
     <main class="container">
 
       <section class="new-tweet">
+
           <h2>Compose Tweet</h2>
 
           <form id="tweet-form" method="POST" action="/tweets/">
@@ -71,6 +72,9 @@
             <output name="counter" class="counter" for="tweet-text">140</output>
             </div>
          </form>
+
+         <h3 id="alert">⛔️Your Tweet is too long. Limit of 140 characters.⛔️</h3>
+         <h3 id="alertNoChar">⛔️Please type in a tweet before submitting.⛔️</h3>
 
       </section>
 

@@ -102,3 +102,24 @@ article.tweet .user-first-name { /*Chris*/
   color: #ab962c; 
 }
 
+#alert {
+  border: 3px solid red;
+  margin: 50px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  background-color: #f4f1ec;
+}
+
+#alertNoChar {
+  border: 3px solid red;
+  margin: 50px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  background-color: #f4f1ec;
+}
