@@ -32,29 +32,33 @@
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
     
+    <!--Disabling Viewport Zooming -->
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
   </head>
 
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
       <span>Tweeter Home</span>
-      <div class ="new-tweet">
-        <span class="new-tweet-text">Write a new tweet
+      <div class ="write-new-tweet-text">
+        <span class="write-new-tweet-text">Write a new tweet
         <i class="fas fa-angle-double-down"></i>
         </span>
       </div>
     </nav>
 
+    <div class="background">
     <header class ="user-profile">
-      <div class ="user-profile">
+
+      <div class ="user-profile-pic">
           <img src="/images/profile-hex.png"> 
       </div>
       
-      <div class = "user-profile">
+      <div class = "user-profile-name">
           <h2>Amy Mansell</h2>
       </div>
     </header>
-
+  </div>
     <!-- Page-specific (main) content here -->
     <main class="container">
 

@@ -10,5 +10,28 @@ header.user-profile {
   background-color: #92b8eb;
   background-image: url("https://www.transparenttextures.com/patterns/foggy-birds.png");
 /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  
 }
+
+
+/* Laptops / Desktops: minimum width of 1024px */
+@media only screen and (min-width: 1024px) {
+ 
+  header.user-profile {
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    float:left;
+    margin-top: 10em;
+    font-size: smaller;
+  }
+
+
+  .background {
+    padding-left: 15%;
+    padding-right: 20%;
+    
+    }
+}
+
 

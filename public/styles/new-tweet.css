@@ -66,7 +66,6 @@ article.tweet header {
   justify-content: space-around;
   background-color: #f4f1ec;
   padding: 20px;
-   
 }
 
 article.tweet img { /*Profile Pic*/
@@ -122,4 +121,35 @@ article.tweet .user-first-name { /*Chris*/
   align-content: center;
   justify-content: center;
   background-color: #f4f1ec;
+}
+
+
+
+@media only screen and (min-width: 1024px) {
+  .new-tweet {
+    flex-direction: column; 
+    justify-content: center;
+    float:right;
+    margin-top: 30%; /*Set to the height of the navabar so that the header is pushed below*/ 
+  
+  }
+
+  .tweets-container {
+    float: right;
+    flex: 1;
+  }
+
+  article {
+    margin: 100px;
+  }
+
+  article.tweet header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #f4f1ec;
+    padding: 20px;
+  }
+  
 }

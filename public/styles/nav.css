@@ -1,9 +1,9 @@
 nav {
-  height: 120px; /* Set height to 120 pixels */
+  height: 120px; 
   width: 100%; /* Full width of the viewport */
   background-color: #4056A1; /* Default background color */
   color: #FFFFFF; /* Default font color */
-  padding: 1.5em; /* Add padding for spacing on the right and left */
+  padding: 2.5em; /* Add padding for spacing on the right and left */
   display: flex;
   justify-content: space-between; /* Align items on the right and left */
   align-items: center; /* Center items vertically */
@@ -11,11 +11,17 @@ nav {
   top: 0; 
   left: 0;
   right:0;
-  z-index: 1000; /*Ensures navbar is above other elements, higher value z-index items are stacked on top of lower ones*/
 }
 
+nav i {color: red;} /*Double arrow down icon*/
+
+
 nav span {
-  font-family: 'Bungee', sans-serif; /* Apply Bungee to span within nav */
+  font-family: 'Bungee', sans-serif; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
 }
 
 .new-tweet-text {
@@ -25,6 +31,13 @@ nav span {
   margin-right: 10px;
 }
 
-
+/* Laptops / Desktops: minimum width of 1024px */
+@media only screen and (max-width: 1024px) {
+  
+  nav {
+  background-color:#92b8eb;;
+  background-image: url("https://www.transparenttextures.com/patterns/foggy-birds.png");
+  }
+}
 
 
