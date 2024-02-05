@@ -16,3 +16,8 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+
+## Screenshots
+
+!["Screenshot of tweet compose box in tablet view"](https://github.com/cde-as/tweeter/blob/master/docs/Compose-Tweet-Tablet-View.png)
+!["Screenshot of tweeter homepage in desktop view"](https://github.com/cde-as/tweeter/blob/master/docs/Desktop-View-Homepage.png)
