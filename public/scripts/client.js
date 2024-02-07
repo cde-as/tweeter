@@ -6,7 +6,7 @@
 
 /* global $, document, timeago */
 
-const data = [
+/* const data = [
   {
     user: {
       name: "Newton",
@@ -18,20 +18,8 @@ const data = [
     },
     // eslint-disable-next-line camelcase
     created_at: 1461116232227,
-  },
-  {
-    user: {
-      name: "Descartes",
-      avatars: "https://i.imgur.com/nlhLi3I.png",
-      handle: "@rd",
-    },
-    content: {
-      text: "Je pense , donc je suis",
-    },
-    // eslint-disable-next-line camelcase
-    created_at: 1461113959088,
-  },
-];
+  }
+]; */
 
 const escape = function (str) {
   let div = document.createElement("div");
@@ -141,6 +129,3 @@ $(document).ready(() => {
   });
 });
 
-$(document).ready(() => {
-  renderTweets(data);
-});
