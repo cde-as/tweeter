@@ -21,7 +21,7 @@
   }
 ]; */
 
-const escape = function (str) {
+const escape = function(str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
@@ -90,9 +90,9 @@ $(document).ready(() => {
       return;
     }
 
-    const eraseText = function() {
+    /* const eraseText = function() {
       document.getElementById("tweet-text").value = "";
-    };
+    }; */
     
     const counterRestart = function() {
       $('.counter').val(140);
@@ -102,7 +102,7 @@ $(document).ready(() => {
     if (tweetContent.length > 140) {
       $("#alert").slideDown();
       alertElement.style.display = "flex";
-      eraseText();
+      //eraseText();
       counterRestart();
       return;
     }
